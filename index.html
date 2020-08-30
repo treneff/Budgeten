@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f7d4881d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Budgeten</title>
+</head>
+
+<body>
+    <div class="container-top">
+        <header>
+            <div class="budget">
+                <div class="budget-title">
+                    Available Budget in <span class="budget-title-month">%Month%</span>:
+                </div>
+
+                <div class="budget-value">+ 1,234.5</div>
+
+                <div class="budget-income clearfix">
+                    <div class="budget-income-text">In</div>
+                    <div class="right">
+                        <div class="budget-income-value ">+ 1,234.5</div>
+                    </div>
+                </div>
+
+                <div class="budget-expenses clearfix">
+                    <div class="budget-expenses-text">Out</div>
+                    <div class="right clearfix">
+                        <div class="budget-expenses-value">- 1,234.5</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="add-new">
+                <div class="add-container">
+                    <select class="add-type">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                    <input type="text" class="add-description" placeholder="Add description">
+                    <input type="number" class="add-value" placeholder="Value">
+                    <button class="add-btn"><i class="far fa-check-circle"></i></button>
+                </div>
+            </div>
+            <div class="container-main clearfix">
+                
+                    <div class="income">
+                        <h2 class="income-title">Income</h2>
+                        
+                        <div class="income-list">
+                                <!-- <div class="item clearfix" id="income-0">
+                                <div class="item-description">Salary</div>
+                                <div class="right clearfix">
+                                    <div class="item-value">+ 2,100.00</div>
+                                    <div class="item-delete">
+                                        <button class="item-delete-btn">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item clearfix" id="income-1">
+                                <div class="item-description">Sold car</div>
+                                <div class="right clearfix">
+                                    <div class="item-value">+ 1,500.00</div>
+                                    <div class="item-delete">
+                                        <button class="item-delete-btn"><i class="fas fa-minus"></i></i></button>
+                                    </div>
+                                </div>
+                            </div> -->
+                        
+                        </div>
+                    </div>
+               
+                    
+                    <div class="expenses">
+                        <h2 class="expenses-title">Expenses</h2>
+                        
+                        <div class="expenses-list">
+
+                                <!-- <div class="item clearfix" id="expense-0">
+                                <div class="item-description">Apartment rent</div>
+                                <div class="right clearfix">
+                                    <div class="item-value">- 900.00</div>
+                                    <div class="item-delete">
+                                        <button class="item-delete-btn"><i class="fas fa-minus"></i></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item clearfix" id="expense-1">
+                                <div class="item-description">Grocery shopping</div>
+                                <div class="right clearfix">
+                                    <div class="item-value">- 435.28</div>
+                                    <div class="item-percentage">10%</div>
+                                    <div class="item-delete">
+                                        <button class="item-delete-btn"><i class="fas fa-minus"></i></i></button>
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+                    </div>   
+                </div> 
+            </div>        
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
