@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <div class="container-top">
         <header>
             <div class="budget">
@@ -18,21 +19,40 @@
                 </div>
 
                 <div class="budget-value">+ 1,234.5</div>
+            </div>
 
-                <div class="budget-income clearfix">
-                    <div class="budget-income-text">In</div>
-                    <div class="right">
-                        <div class="budget-income-value ">+ 1,234.5</div>
-                    </div>
-                </div>
-
-                <div class="budget-expenses clearfix">
-                    <div class="budget-expenses-text">Out</div>
-                    <div class="right clearfix">
-                        <div class="budget-expenses-value">- 1,234.5</div>
-                    </div>
+            <div class="budget-income clearfix">
+                <div class="budget-income-text">In</div>
+                <div class="right">
+                    <div class="budget-income-value ">+ 1,234.5</div>
                 </div>
             </div>
+
+            <div class="budget-expenses clearfix">
+                <div class="budget-expenses-text">Out</div>
+                <div class="right clearfix">
+                    <div class="budget-expenses-value">- 1,234.5</div>
+                </div>
+            </div>
+           
+            <div class="savings-container">
+                <div class="savings clearfix">  
+                    <div class="savings-text">Savings Pot</div>
+                    <div class="right clearfix">
+                        <div class="savings-value"> - 155</div> 
+                    </div>
+                        
+                </div>
+                <div class="savings-add">
+                    <input type="number" class="add-pot" placeholder="Update Pot">
+                    <button class="add-btn-savings"><i class="fas fa-plus"></i></i></button>
+                    <button class="remove-btn-savings"><i class="fas fa-minus"></i></i></button>
+                </div>
+        
+                
+            
+            </div>
+        
         </header>
 
         <main>
@@ -41,9 +61,9 @@
                     <select class="add-type">
                     <option value="inc" selected>+</option>
                     <option value="exp">-</option>
-                    <input type="text" class="add-description" placeholder="Add description">
+                    <input type="text" class="add-description" placeholder="Add item to Budget">
                     <input type="number" class="add-value" placeholder="Value">
-                    <button class="add-btn"><i class="far fa-check-circle"></i></button>
+                    <button class="add-btn"><i class="fas fa-check"></i></button>
                 </div>
             </div>
             <div class="container-main clearfix">

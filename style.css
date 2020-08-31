@@ -49,7 +49,7 @@ body {
   height: 100vh;
   margin: auto;
   background-color: var(--primary-color);
-  border-radius: 15px;
+  border-radius: 15px 0 15px 15px;
 }
 .budget {
   padding-top: 15px;
@@ -66,6 +66,7 @@ body {
   margin: auto;
   text-transform: uppercase;
 }
+
 .budget-income {
   margin-bottom: 6px;
   background-color: var(--contrast-color);
@@ -75,17 +76,43 @@ body {
   margin-bottom: 6px;
   background-color: var(--filling-color);
 }
+.savings-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto 100px;
+}
+.savings {
+  background-color: #a1d481;
+  border-radius: 7px;
+  width: 70%;
+  min-width: 150px;
+  padding: 20px;
+  margin: auto;
+  text-transform: uppercase;
+}
+.savings-add {
+  background-color: #f7f7f7;
+  padding: 7px;
+  text-align: center;
+  margin: 10px auto;
+  width: 20%;
+  min-width: 100px;
+  border-radius: 7px;
+}
 .budget-income-text,
-.budget-expenses-text {
+.budget-expenses-text,
+.savings-text {
   float: left;
   font-size: 13px;
   margin-top: 2px;
 }
 .budget-income-value,
-.budget-expenses-value {
+.budget-expenses-value,
+.savings-value {
   letter-spacing: 1px;
   float: left;
 }
+
 .add {
   border-bottom: 1px solid #e7e7e7;
   background-color: #f7f7f7;
@@ -113,7 +140,8 @@ body {
 }
 
 .add-description,
-.add-value {
+.add-value,
+.add-pot {
   border: 1px solid #e7e7e7;
   background-color: #f7f7f7;
   color: inherit;
@@ -124,6 +152,10 @@ body {
   border-radius: 5px;
   transition: border 0.3s;
 }
+.add-pot {
+  padding: 0px;
+  width: 100%;
+}
 
 .add-description {
   width: 250px;
@@ -132,15 +164,18 @@ body {
 .add-value {
   width: 70px;
 }
-.add-btn {
+.add-btn,
+.add-btn-savings,
+.remove-btn-savings {
   background-color: none;
   width: 35px;
-  height: 26px;
+  height: 24px;
 }
 
 .add-type:focus,
 .add-description:focus,
-.add-value:focus {
+.add-value:focus,
+.add-pot:focus {
   outline: none;
   border: 1px solid var(--dark-color);
   border-radius: 5px;
@@ -150,7 +185,7 @@ body {
   background-color: #f7f7f7;
   border-radius: 5px;
   margin: auto 2vh;
-  height: 67vh;
+  height: 55vh;
 }
 
 .income {
