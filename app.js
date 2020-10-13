@@ -19,7 +19,7 @@ const budgetController = (() => {
     data.totals[type] = sum;
   };
   calculatePotTotal = (value) => {
-    ////////////////////////////////////////////////////////////////BUG IS HERE trying to update value of Pot
+    ///////////////////////////////////////////////////////BUG IS HERE trying to update value of Pot
     let sumPot = 0;
     data.pot[value]((cur) => {
       sumPot += cur.value;
@@ -85,7 +85,7 @@ const budgetController = (() => {
       //calculate total income and expenses
       calculateTotal('exp');
       calculateTotal('inc');
-      calculatePotTotal();
+
       //calculate the budget: income - expenses
       data.budget = data.totals.inc - data.totals.exp - data.totals.pot;
     },
@@ -103,6 +103,7 @@ const budgetController = (() => {
 
 //UI CONTROLLER
 const UIController = (() => {
+  // references to HTML selectors
   const DOMStrings = {
     inputType: '.add-type',
     inputDescription: '.add-description',
@@ -121,6 +122,8 @@ const UIController = (() => {
     inputPot: '.add-pot',
     potLabel: '.savings-value',
   };
+
+  // method to get input
   return {
     getInput: () => {
       return {
@@ -129,6 +132,7 @@ const UIController = (() => {
         value: parseFloat(document.querySelector(DOMStrings.inputValue).value),
       };
     },
+    // get pot input
     getPotInput: () => {
       return {
         value: parseFloat(document.querySelector(DOMStrings.inputPot).value),
