@@ -18,13 +18,11 @@ const budgetController = (() => {
     });
     data.totals[type] = sum;
   };
-  calculatePotTotal = (value) => {
-    ///////////////////////////////////////////////////////BUG IS HERE trying to update value of Pot
+  calculatePotTotal = () => {
     let sumPot = 0;
-    data.pot[value]((cur) => {
-      sumPot += cur.value;
-    });
-    data.totals = sumPot;
+
+    sumPot = sumPot + data.pot;
+    data.totals.pot = sumPot;
   };
   let data = {
     allItems: {
@@ -77,14 +75,20 @@ const budgetController = (() => {
     },
     addInputPot: (val) => {
       let returnAddPot = data.pot;
-      data.pot = val;
+      data.pot = data.pot + val;
       return returnAddPot;
+    },
+    removeInputPot: (val) => {
+      let returnRemovePot = data.pot;
+      data.pot = data.pot - val;
+      return returnRemovePot;
     },
 
     calculateBudget: () => {
       //calculate total income and expenses
       calculateTotal('exp');
       calculateTotal('inc');
+      calculatePotTotal();
 
       //calculate the budget: income - expenses
       data.budget = data.totals.inc - data.totals.exp - data.totals.pot;
@@ -163,6 +167,9 @@ const UIController = (() => {
       el.parentNode.removeChild(el);
     },
     addPotItem: (val) => {
+      document.querySelector(DOMStrings.potLabel).textContent = val;
+    },
+    removePotItem: (val) => {
       document.querySelector(DOMStrings.potLabel).textContent = val;
     },
     clearFields: () => {
@@ -277,8 +284,6 @@ const controller = ((budgetCtrl, UICtrl) => {
     if (potInput.value > 0) {
       let addPot = budgetCtrl.addInputPot(potInput.value);
 
-      console.log(addPot);
-
       UICtrl.addPotItem(addPot);
       UICtrl.clearFields();
       //calculate the budget
@@ -286,8 +291,15 @@ const controller = ((budgetCtrl, UICtrl) => {
     }
   };
   ctrlRemovePot = () => {
-    let inputPot = UICtrl.getInput();
-    console.log(inputPot);
+    let potInput = UICtrl.getPotInput();
+    if (potInput.value > 0) {
+      let removePot = budgetCtrl.removeInputPot(potInput.value);
+
+      UICtrl.removePotItem(removePot);
+      UICtrl.clearFields();
+      //calculate the budget
+      updateBudget();
+    }
   };
 
   return {
