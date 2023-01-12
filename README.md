@@ -1,4 +1,4 @@
-# Budgeteb
+# Budgeten
 
 A JavaScript budget calculator utilising ES6 and able to calculate income, expenses and savings along with displaying the respective expenses. The application is mobile responsive.
 <br>
@@ -10,9 +10,10 @@ Primary goal while developing the application was to practice ES6 syntax, IIFEs,
 * [Installation](#installation)
 
 <br>
-<img width="1506" alt="Screenshot 2023-01-12 at 13 24 25" src="https://user-images.githubusercontent.com/65739239/212085496-2725a4c3-2861-4c87-9af2-782e56b7c3c9.png">
-<img width="1506" alt="Screenshot 2023-01-12 at 13 24 59" src="https://user-images.githubusercontent.com/65739239/212088053-f8c108fd-66dd-4664-a73f-c99bb19f6aba.png">
-<img width="1507" alt="Screenshot 2023-01-12 at 13 24 35" src="https://user-images.githubusercontent.com/65739239/212085524-8d416d73-96a0-4e55-9bdd-f621a24dd8b4.png">
+![Screenshot 2023-01-12 at 21 19 05](https://user-images.githubusercontent.com/65739239/212185064-07340477-0e15-4c66-b9f3-3ec731c8bd89.png)
+![Screenshot 2023-01-12 at 21 19 25](https://user-images.githubusercontent.com/65739239/212185093-05fee495-42b2-42ab-a8ad-b02cbbbebb1e.png)
+![Screenshot 2023-01-12 at 21 19 44](https://user-images.githubusercontent.com/65739239/212185103-17e68869-b45a-48fc-afbf-2919f78745a8.png)
+
 
 ## Technologies
 
