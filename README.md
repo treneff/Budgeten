@@ -10,7 +10,7 @@ Primary goal while developing the application was to practice ES6 syntax, IIFEs,
 * [Installation](#installation)
 
 <br>
-<img width="1506" alt="Screenshot 2023-01-12 at 13 24 25" src="https://user-images.githubusercontent.com/65739239/212185064-07340477-0e15-4c66-b9f3-3ec731c8bd89.png)">
+<img width="1506" alt="Screenshot 2023-01-12 at 13 24 25" src="https://user-images.githubusercontent.com/65739239/212185064-07340477-0e15-4c66-b9f3-3ec731c8bd89.png">
 
 
 ## Technologies
