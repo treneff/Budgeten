@@ -120,7 +120,6 @@ const UIController = (() => {
     expensesLabel: '.budget-expenses-value',
     container: '.container-main',
     dateLabel: '.budget-title-month',
-    //pot
     inputAddPot: '.add-btn-savings',
     inputRemovePot: '.remove-btn-savings',
     inputPot: '.add-pot',
